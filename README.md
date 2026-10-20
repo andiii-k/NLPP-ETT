@@ -13,6 +13,19 @@ This repository contains the English translated UI and custom textures for *NEW 
 This project aims to provide a high-quality visual translation for menus, UI elements, and various in-game graphics, carefully matching the original game's fonts and style.
 
 
+## The Story So Far
+
+I started this project on May 14, 2025, because I wanted to improve the translation quality and progress of the existing community project. 
+
+I unpacked every game file—from `img.bin`, `.arc`, `.bclim`, all the way down to the `.png` files—and organized everything. I extracted the Japanese text, translated it, found matching fonts, and edited every texture one by one. By June 1, 2025, the translation was about 70-75% complete (covering around 1,694 files). 
+
+However, things didn't go as planned when I tried to repack them. I discovered a harsh limitation: the size of the data inside `img.bin` cannot change because it breaks the file offsets. My translated files were slightly larger, which caused textures to disappear or turn into black squares in-game. Compressing them made them incredibly blurry. Feeling hopeless after months of work, I took a break.
+
+I knew about emulator Custom Textures, but realizing that the dumped PNG filenames and resolutions were completely different from the original `.bclim` files meant I essentially had to redo 70% of my work. 
+
+Finally, on November 5, 2025, I regained my motivation. I dumped the textures, identified each one, matched them to their original folders, and replaced them with my translated versions. Seeing the results working flawlessly in-game made it all worth it!
+
+
 ## In-Game Preview
 
 <table border="0">
@@ -47,6 +60,46 @@ This project aims to provide a high-quality visual translation for menus, UI ele
     </td>
   </tr>
 </table>
+
+
+## Texture Usage Guide
+
+### 1. `Translated_PNG [EN]` (Raw Assets)
+* **Target Audience:** Modders and advanced users.
+* **Technical Requirement:** These raw translated PNGs **cannot** be repacked directly into BCLIM archives or `img.bin` as-is. Due to strict offset constraints in the game engine, the exact file byte size of each translated PNG must strictly match the byte size of the original Japanese PNG.
+* **Recommended Patcher:** If you want an easy, automated solution to apply these UI texture translations directly to your dumped 3DS game files, use [NewLovePlusPlusEngPatcher by zaccken](https://github.com/zaccken/NewLovePlusPlusEngPatcher).
+
+---
+
+### 2. `Custom Textures` for Citra / Azahar *(Coming Soon!)*
+Custom textures load dynamically via the emulator without modifying your game ROM.
+
+* **Resolution Variants:**
+  * `1x_Resolution` *(Native)*: Ideal for low-end devices or small screens.
+  * `2x_Resolution`: Optimal for mid-range devices and modern handhelds.
+  * `3x_Resolution`: Recommended for mid-to-high-end PCs and large displays.
+
+* **Installation Steps:**
+  1. Extract the chosen resolution folder into your emulator's texture directory:  
+     `Citra (or Azahar) ➔ load ➔ textures`
+  2. Open emulator settings and navigate to **Graphics**.
+  3. Enable **Use custom textures**.
+  4. *(Optional)* Enable **Preload custom textures** for smoother stutter-free performance (recommended for higher-spec devices).
+
+* **⚠️ Important Notes:**
+  * **Vanilla ROM Required:** Your 3DS ROM (ARC / TEXI archives) must remain unpatched/vanilla, as custom textures rely on the original file hashes to load properly.
+  * **Mod Conflicts:** If you are using RomFS mods, make sure there is **no `img.bin`** inside your mod folder. A `img.bin` alters texture hashes, causing custom textures to fail to load.
+
+---
+
+## Troubleshooting
+
+If the game **freezes or crashes** upon launching (especially with *Preload custom textures* enabled):
+
+1. **Clear Shader Cache:** Delete the **Disk Shader Cache** for NEW LovePlus+ in Citra/Azahar.
+2. **Disable Preloading:** Turn off **Preload custom textures** and use standard custom texture loading instead.
+3. **Lower Texture Resolution:** If your device runs out of RAM/VRAM, switch to a lower resolution pack (e.g., from `3x` to `2x` or `1x`).
+4. **Switch Graphics Renderer:** Change your emulator's graphics API from **OpenGL** to **Vulkan** for better memory stability.
 
 
 ## Translation Progress
@@ -175,30 +228,21 @@ Below is the texture translation progress breakdown per ARC or Package folder in
 
 > **Note:** "⏳ Partial" means that the folder is only partially translated. Some textures within these archives still remain in Japanese.
 
-## The Story So Far
-
-I started this project on May 14, 2025, because I wanted to improve the translation quality and progress of the existing community project. 
-
-I unpacked every game file—from `img.bin`, `.arc`, `.bclim`, all the way down to the `.png` files—and organized everything. I extracted the Japanese text, translated it, found matching fonts, and edited every texture one by one. By June 1, 2025, the translation was about 70-75% complete (covering around 1,694 files). 
-
-However, things didn't go as planned when I tried to repack them. I discovered a harsh limitation: the size of the data inside `img.bin` cannot change because it breaks the file offsets. My translated files were slightly larger, which caused textures to disappear or turn into black squares in-game. Compressing them made them incredibly blurry. Feeling hopeless after months of work, I took a break.
-
-I knew about emulator Custom Textures, but realizing that the dumped PNG filenames and resolutions were completely different from the original `.bclim` files meant I essentially had to redo 70% of my work. 
-
-Finally, on November 5, 2025, I regained my motivation. I dumped the textures, identified each one, matched them to their original folders, and replaced them with my translated versions. Seeing the results working flawlessly in-game made it all worth it!
-
-## Current Status
-
-**Active and Continuously Updating!** 
+**Current Status: Still and Continuously Updating!** 
 
 While it was briefly on hold due to real-life work and needing game progress to trigger new textures (for Custom Textures), the project is now back in active development.
 
-You can also find this texture project integrated and available through the [NewLovePlusPlusEngPatcher by czyrustuazon](https://github.com/czyrustuazon/NewLovePlusPlusEngPatcher), which provides an easy script for patching the game.
+
+## Texture Quality & Reuse Policy
+
+* All translated textures (including 1x, 2x, and 3x custom resolution packs) were manually edited and several were completely redrawn by hand. **No AI upscaling or automated image generation tools** were used for any of the visual assets.
+* AI was strictly used as a supplementary tool for translating Japanese text into English.
+* Fellow modders and community members are welcome to use or build upon these assets in their own projects or patches. However, as a tremendous amount of time and effort went into manually recreating these textures, **please kindly provide proper credit and link back to this repository** if you use them.
+
 
 ## Credits & Acknowledgements
 
-* **Texture Translation & Editing:** Zhoumaru
-* **Tools:** [NLPP Tools by kiwiz](https://github.com/kiwiz/nlpp-tools), [NLPP Texture Tool by czyrustuazon](https://github.com/czyrustuazon/nlpp-texture-tool), and NLPP Toolchain by Cetaceaqua
+* **Tools:** [NLPP Tools by kiwiz](https://github.com/kiwiz/nlpp-tools), [NLPP Texture Tool by czyrustuazon](https://github.com/czyrustuazon/nlpp-texture-tool), and NLPP Toolchain by [Cetaceaqua](https://github.com/Cetaceaqua)
 * **Work Reference:** [Makein's NLPPGit](https://github.com/Makein/NLPPGit)
 * **Patcher / Integration:** [NewLovePlusPlusEngPatcher by czyrustuazon](https://github.com/czyrustuazon/NewLovePlusPlusEngPatcher)
 
