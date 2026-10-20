@@ -252,4 +252,4 @@ While it was briefly on hold due to real-life work and needing game progress to 
 *This is a **non-profit, fan-made translation and modification project**. `NLPP-ETT` (NEW LovePlus+ English Textures Translation) is entirely unofficial and is **not** affiliated with, endorsed, sponsored, or approved by **Konami Digital Entertainment**, the original developers, or any of their associated partners. All rights, copyrights, and the ラブプラス (LovePlus) trademarks belong exclusively to Konami Digital Entertainment. Please support the creators by purchasing the official releases.*
 
 ---
-*If you find any textures that need fixing or revision, feel free to let me know on Discord [Project NLP+ Localization](https://discord.gg/ctbnsPC3jn)! *
+*If you find any textures that need fixing or revision, feel free to let me know on Discord [Project NLP+ Localization](https://discord.gg/ctbnsPC3jn)!*
