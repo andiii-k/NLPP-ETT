@@ -104,7 +104,7 @@ If the game **freezes or crashes** upon launching (especially with *Preload cust
 
 ## Translation Progress
 
-**Last Updated:** October 19, 2026
+**Last Updated:** October 24, 2026
 
 Below is the texture translation progress breakdown per ARC or Package folder in the game.
 
@@ -114,20 +114,20 @@ Below is the texture translation progress breakdown per ARC or Package folder in
 | `0003_data` | 1 / 1 | ✅ Complete |
 | `0007_data` | 26 / 26 | ✅ Complete |
 | `0090_data` | 3 / 3 | ✅ Complete |
-| `4090_data` | 0 / 8 | ❌ Not Started |
+| `4090_data` | 8 / 8 | ✅ Complete |
 | `4091_data` | 0 / 12 | ❌ Not Started |
-| `5359_data` | 0 / 1 | ❌ Not Started |
+| `5359_data` | 1 / 1 | ✅ Complete |
 | `5362_data` | 0 / 27 | ❌ Not Started |
-| `5366_data` | 0 / 1 | ❌ Not Started |
-| `5369_data` | 0 / 2 | ❌ Not Started |
-| `5398_data` | 0 / 9 | ❌ Not Started |
-| `5440_data` | 0 / 2 | ❌ Not Started |
-| `5754_data` | 0 / 1 | ❌ Not Started |
-| `5779_data` | 0 / 3 | ❌ Not Started |
-| `5780_data` | 0 / 3 | ❌ Not Started |
-| `5781_data` | 0 / 3 | ❌ Not Started |
+| `5366_data` | 1 / 1 | ✅ Complete |
+| `5369_data` | 2 / 2 | ✅ Complete |
+| `5398_data` | 9 / 9 | ✅ Complete |
+| `5440_data` | 2 / 2 | ✅ Complete |
+| `5754_data` | 1 / 1 | ✅ Complete |
+| `5779_data` | 3 / 3 | ✅ Complete |
+| `5780_data` | 3 / 3 | ✅ Complete |
+| `5781_data` | 3 / 3 | ✅ Complete |
 | `5789_data` | 0 / 27 | ❌ Not Started |
-| `5792_data` | 0 / 1 | ❌ Not Started |
+| `5792_data` | 1 / 1 | ✅ Complete |
 | `Album (4149_data)` | 39 / 39 | ✅ Complete |
 | `AMScratch (4150_data)` | 7 / 7 | ✅ Complete |
 | `CameraSetting (4151_data)` | 12 / 12 | ✅ Complete |
@@ -165,7 +165,7 @@ Below is the texture translation progress breakdown per ARC or Package folder in
 | `DateEditMaskEdit (4199_data)` | 9 / 9 | ✅ Complete |
 | `DateEditSpotInfo (5386_data)` | 94 / 94 | ✅ Complete |
 | `DLC (4200_data)` | 2 / 2 | ✅ Complete |
-| `ExCardCommon` | 0 / 78 | ❌ Not Started |
+| `ExCardCommon` | 4 / 78 | ⏳ Partial |
 | `ExCardManaka` | 0 / 15 | ❌ Not Started |
 | `ExCardNene` | 0 / 15 | ❌ Not Started |
 | `ExCardRinko` | 0 / 16 | ❌ Not Started |
